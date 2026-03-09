@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./login.css">
 </head>
 <body>
-    <form action="../index.html" method="POST">
+    <form action="./../index.html" method="POST">
         <div class="login-container">
             <div class="header">
                 <img src="../images/marutrao_ghule_patil.jpg" alt="Logo" class="logo">
@@ -26,4 +26,5 @@
     </form>
 </body>
 </html>
+
 
