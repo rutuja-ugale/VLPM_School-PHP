@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+</head>
+
+<body style="text-align:center; margin-top:100px; font-family:Arial;">
+
+    <h2>Admission Fee Payment</h2>
+    <p>Amount: ₹500</p>
+
+    <h3>Scan & Pay</h3>
+    <img src="../images/pay_scanner.jpeg" width="200" alt="pay scanner">
+
+    <br><br>
+
+    <button onclick="payNow()" style="padding:10px; background:green; color:white;">
+        I Have Paid
+    </button>
+
+    <script>
+        function payNow() {
+            window.location.href = "payment_success.php";
+        }
+    </script>
+
+</body>
+
+</html>

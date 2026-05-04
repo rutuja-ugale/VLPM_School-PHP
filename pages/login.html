@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./login.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Saira:ital,wght@0,100..900;1,100..900&family=Share+Tech&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap');
+
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Saira", sans-serif;
+        }
+
+        header {
+            height: 60px;
+            width: 100%;
+            background-color: #f8f9fa;
+            text-align: center;
+            display: flex;
+            font-family: Arial, sans-serif;
+        }
+
+        .logo {
+            width: 30%;
+            padding-left: 9rem;
+            display: flex;
+            font-weight: bold;
+            color: #333333;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo h1 i {
+            color: #0047B3;
+        }
+
+        nav {
+            width: 70%;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding-left: 8rem;
+
+        }
+
+        nav a {
+            margin: 0 25px;
+            text-decoration: none;
+            color: #0047B3;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+            text-underline-offset: 4px;
+        }
+
+        body {
+            background-color: #e9ecef;
+            height: 100vh;
+        }
+
+        form {
+            height: 70%;
+            width: 300px;
+            margin: 50px auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f8f9fa;
+        }
+
+        form img {
+            display: block;
+            margin: 0 auto 20px;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+        form h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+
+        form label {
+            display: block;
+            margin-bottom: 5px;
+            color: #333333;
+        }
+
+        form input[type="text"],
+        form input[type="password"] {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        form button {
+            width: 100%;
+            padding: 10px;
+            background-color: #0047B3;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+
+        .footer {
+            height: 60px;
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            position: sticky;
+            bottom: 0;
+
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>VLP School <i class="fa fa-university"></i></h1>
+
+        </div>
+        <nav>
+            <a href="./../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./register.html">Registration</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+    <form action="./login.php" method="post">
+        <img src="./../images/marutrao_ghule_patil.jpg" alt="">
+        <h2>Login</h2>
+        <label for="email">email:</label>
+        <input type="text" id="email" name="email" required>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        <button type="submit">Login</button>
+    </form>
+    <div class="footer">
+        <p>&copy; 2026 VLP School. All Rights Reserved.</p>
+    </div>
+
+</body>
+
+</html>

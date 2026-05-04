@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Registration</title>
+    <link rel="stylesheet" href="./register.css">
+    
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <h1>VLP School <i class="fa fa-university"></i></h1>
+
+        </div>
+        <nav>
+            <a href="./../index.html">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./register.html">Registration</a>
+            <a href="./contact.html">Contact</a>
+        </nav>
+    </header>
+
+
+    <div class="container">
+        <h2>Student Registration</h2>
+
+        <form action="register.php" method="POST">
+            <input type="text" name="name" placeholder="Student Name" required>
+            <input type="email" name="email" placeholder="Email" required>
+            <input type="text" name="mobile" placeholder="Mobile" required>
+            <input type="text" name="address" placeholder="Address">
+
+            <!-- ✅ Important Field -->
+            <input type="password" name="password" placeholder="Password" required>
+
+            <button type="submit">Register</button>
+
+            <p>
+                Already have an account?
+                <a href="./login.html">Login here</a>
+            </p>
+        </form>
+    </div>
+    <div class="footer">
+        <p>&copy; 2026 VLP School. All Rights Reserved.</p>
+    </div>
+</body>
+
+</html>

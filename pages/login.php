@@ -1,30 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
-    <link rel="stylesheet" href="./login.css">
-</head>
-<body>
-    <form action="./../index.html" method="POST">
-        <div class="login-container">
-            <div class="header">
-                <img src="../images/marutrao_ghule_patil.jpg" alt="Logo" class="logo">
-            </div>
-            <h2>Login</h2>
-            <div class="input-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-            </div>
-            <div class="input-group">
-                <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
-            </div>
-            <input type="submit" onclick="login()" class="login-button" value="Login">
-        </div>
-    </form>
-</body>
-</html>
+<?php
+session_start();
 
+include '../db.php';
 
+if(!$conn){
+    die("Connection failed");
+}
+
+// form data
+$email = $_POST['email'];
+$password = $_POST['password'];
+
+// check user
+$query = "SELECT * FROM students WHERE email='$email' AND password='$password'";
+$result = mysqli_query($conn, $query);
+
+if(mysqli_num_rows($result) > 0){
+
+    // ✅ session create
+    $_SESSION['student'] = $email;
+
+    // redirect to admission
+    header("Location: admission.html");
+    exit();
+
+}else{
+
+    // ❌ alert + back
+    echo "<script>
+            alert('Invalid Email or Password');
+            window.location.href='login.html';
+          </script>";
+}
+?>
